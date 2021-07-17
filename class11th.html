@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+
+    </div>
+  
+
+    <button>Increament</button>
+    <button>reset</button>
+    <button>decrement</button>
+
+
+    <script>
+        var mydiv = document.getElementsByTagName("div")[0];
+        var mybtn = document.getElementsByTagName("button")[0];
+        var myrestbtn = document.getElementsByTagName("button")[1];
+        var mydecr=document.getElementsByTagName("button")[2]
+
+        mydiv.innerText = 0;
+
+
+        mybtn.addEventListener("click", mycounter);
+
+        counter = 0;
+        function mycounter(){
+            counter++; 
+            mydiv.innerText = counter;
+        }
+       
+
+        myrestbtn.addEventListener("click" , restfunc)
+
+        function restfunc() {
+            mydiv.innerText = 0;
+        }
+
+        mydecr.addEventListener("click", mydec)
+
+        function mydec(){
+            counter--;
+            mydiv.innerText = counter;
+        } 
+    </script>
+</body>
+</html>
